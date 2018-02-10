@@ -2,8 +2,6 @@ package com.github.lidajun.android.common.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
 import android.view.Gravity;
 import android.widget.Toast;
 
@@ -21,7 +19,7 @@ public class LToast {
     }
 
     @SuppressLint("ShowToast")
-    public static Toast getExitToast(@NonNull Context context, @StringRes int strId) {
+    public static Toast getExitToast(Context context, int strId) {
         context = context.getApplicationContext();
         Toast toast = Toast.makeText(context, strId, Toast.LENGTH_SHORT);
         toast.setGravity(GRAVITY, 0, 0);
@@ -29,14 +27,14 @@ public class LToast {
     }
 
     @SuppressLint("ShowToast")
-    public static void show(@NonNull Context context, String text, int duration) {
+    public static void show(Context context, String text, int duration) {
         makeToast(context, duration);
         sToast.setText(text);
         sToast.show();
     }
 
     @SuppressLint("ShowToast")
-    public static void show(@NonNull Context context, int textId, int duration) {
+    public static void show(Context context, int textId, int duration) {
         makeToast(context, duration);
         sToast.setText(textId);
         sToast.show();
@@ -50,23 +48,23 @@ public class LToast {
         }
     }
 
-    public static void showLong(@NonNull Context context, int textId) {
+    public static void showLong(Context context, int textId) {
         show(context, textId, Toast.LENGTH_LONG);
     }
 
-    public static void showLong(@NonNull Context context, String s) {
+    public static void showLong(Context context, String s) {
         show(context, s, Toast.LENGTH_LONG);
     }
 
-    public static void showShort(@NonNull Context context, int textId) {
+    public static void showShort(Context context, int textId) {
         show(context, textId, Toast.LENGTH_SHORT);
     }
 
-    public static void showShort(@NonNull Context context, String s) {
+    public static void showShort(Context context, String s) {
         show(context, s, Toast.LENGTH_SHORT);
     }
 
-    public static void showError(@NonNull Context context, Object o,@StringRes int defStr) {
+    public static void showError(Context context, Object o, int defStr) {
         if (null != o && o instanceof String) {
             showShort(context, o.toString());
         } else {

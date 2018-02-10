@@ -1,7 +1,6 @@
 package com.github.lidajun.android.common.utils;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 
 /**
  * dp、sp 转换为 px
@@ -45,14 +44,14 @@ public class LDisplay {
     /**
      * 获取屏幕宽px
      */
-    public static int getScreenWidthPx(@NonNull Context context) {
+    public static int getScreenWidthPx( Context context) {
         return context.getApplicationContext().getResources().getDisplayMetrics().widthPixels;
     }
 
     /**
      * 获取屏幕高px
      */
-    public static int getScreenHeightPx(@NonNull Context context) {
+    public static int getScreenHeightPx( Context context) {
         return context.getApplicationContext().getResources().getDisplayMetrics().heightPixels;
     }
 }

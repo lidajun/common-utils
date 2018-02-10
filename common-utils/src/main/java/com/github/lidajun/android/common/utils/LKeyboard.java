@@ -7,7 +7,6 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Handler;
-import android.support.annotation.NonNull;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -26,7 +25,7 @@ public class LKeyboard {
      *
      * @param activity
      */
-    public static void closeKeyboard(@NonNull Activity activity) {
+    public static void closeKeyboard( Activity activity) {
         View view = activity.getWindow().peekDecorView();
         if (view != null) {
             InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -41,7 +40,7 @@ public class LKeyboard {
      *
      * @param dialog
      */
-    public static void closeKeyboard(@NonNull Dialog dialog) {
+    public static void closeKeyboard( Dialog dialog) {
         View view = dialog.getWindow().peekDecorView();
         if (view != null) {
             InputMethodManager inputMethodManager = (InputMethodManager) dialog.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);

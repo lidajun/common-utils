@@ -1,6 +1,6 @@
 package com.github.lidajun.android.samples.common;
 
-import com.github.lidajun.android.common.utils.LLog;
+import com.github.lidajun.android.common.utils.llog.LLog;
 
 /**
  * Created by lidajun on 18-2-3.

@@ -3,7 +3,7 @@ package com.github.lidajun.android.samples.common;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.github.lidajun.android.common.utils.LLog;
+import com.github.lidajun.android.common.utils.llog.LLog;
 
 import java.io.IOException;
 
